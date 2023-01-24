@@ -2,7 +2,7 @@
 pragma solidity >=0.7 <0.9;
 pragma experimental ABIEncoderV2;
 
-import '../ERC721AUpgradeable.sol';
+import '../ERC721AUpgradeable/ERC721AUpgradeable.sol';
 
 contract ERC721AUpgradeableWithInit is ERC721AUpgradeable {
     constructor(string memory name_, string memory symbol_) payable initializerERC721A {
@@ -46,11 +46,7 @@ contract ERC721ATransferCounterMockUpgradeableWithInit is ERC721ATransferCounter
 import './ERC721AStartTokenIdMockUpgradeable.sol';
 
 contract ERC721AStartTokenIdMockUpgradeableWithInit is ERC721AStartTokenIdMockUpgradeable {
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint256 startTokenId_
-    ) payable initializerERC721A {
+    constructor(string memory name_, string memory symbol_, uint256 startTokenId_) payable initializerERC721A {
         __ERC721AStartTokenIdMock_init(name_, symbol_, startTokenId_);
     }
 }
@@ -64,11 +60,7 @@ contract StartTokenIdHelperUpgradeableWithInit is StartTokenIdHelperUpgradeable 
 import './ERC721AQueryableStartTokenIdMockUpgradeable.sol';
 
 contract ERC721AQueryableStartTokenIdMockUpgradeableWithInit is ERC721AQueryableStartTokenIdMockUpgradeable {
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint256 startTokenId_
-    ) payable initializerERC721A {
+    constructor(string memory name_, string memory symbol_, uint256 startTokenId_) payable initializerERC721A {
         __ERC721AQueryableStartTokenIdMock_init(name_, symbol_, startTokenId_);
     }
 }
@@ -89,11 +81,7 @@ contract ERC721ABurnableMockUpgradeableWithInit is ERC721ABurnableMockUpgradeabl
 import './ERC721ABurnableStartTokenIdMockUpgradeable.sol';
 
 contract ERC721ABurnableStartTokenIdMockUpgradeableWithInit is ERC721ABurnableStartTokenIdMockUpgradeable {
-    constructor(
-        string memory name_,
-        string memory symbol_,
-        uint256 startTokenId_
-    ) payable initializerERC721A {
+    constructor(string memory name_, string memory symbol_, uint256 startTokenId_) payable initializerERC721A {
         __ERC721ABurnableStartTokenIdMock_init(name_, symbol_, startTokenId_);
     }
 }

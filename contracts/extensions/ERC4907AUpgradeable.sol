@@ -5,9 +5,9 @@
 pragma solidity ^0.8.4;
 
 import './IERC4907AUpgradeable.sol';
-import '../ERC721AUpgradeable.sol';
+import '../ERC721AUpgradeable/ERC721AUpgradeable.sol';
 import {ERC4907AStorage} from './ERC4907AStorage.sol';
-import '../ERC721A__Initializable.sol';
+import '../ERC721AUpgradeable/ERC721A__Initializable.sol';
 
 /**
  * @title ERC4907A
@@ -36,11 +36,7 @@ abstract contract ERC4907AUpgradeable is ERC721A__Initializable, ERC721AUpgradea
      *
      * - The caller must own `tokenId` or be an approved operator.
      */
-    function setUser(
-        uint256 tokenId,
-        address user,
-        uint64 expires
-    ) public virtual override {
+    function setUser(uint256 tokenId, address user, uint64 expires) public virtual override {
         // Require the caller to be either the token owner or an approved operator.
         address owner = ownerOf(tokenId);
         if (_msgSenderERC721A() != owner)
@@ -83,13 +79,9 @@ abstract contract ERC4907AUpgradeable is ERC721A__Initializable, ERC721AUpgradea
     /**
      * @dev Override of {IERC165-supportsInterface}.
      */
-    function supportsInterface(bytes4 interfaceId)
-        public
-        view
-        virtual
-        override(ERC721AUpgradeable, IERC721AUpgradeable)
-        returns (bool)
-    {
+    function supportsInterface(
+        bytes4 interfaceId
+    ) public view virtual override(ERC721AUpgradeable, IERC721AUpgradeable) returns (bool) {
         // The interface ID for ERC4907 is `0xad092b5c`,
         // as defined in [ERC4907](https://eips.ethereum.org/EIPS/eip-4907).
         return super.supportsInterface(interfaceId) || interfaceId == 0xad092b5c;

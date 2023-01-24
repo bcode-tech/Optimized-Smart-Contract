@@ -6,7 +6,7 @@ pragma solidity ^0.8.4;
 
 import '../extensions/ERC721AQueryableUpgradeable.sol';
 import '../extensions/ERC721ABurnableUpgradeable.sol';
-import '../ERC721A__Initializable.sol';
+import '../ERC721AUpgradeable/ERC721A__Initializable.sol';
 
 contract ERC721AQueryableMockUpgradeable is
     ERC721A__Initializable,

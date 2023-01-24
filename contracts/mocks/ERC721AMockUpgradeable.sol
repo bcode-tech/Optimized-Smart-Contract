@@ -4,8 +4,8 @@
 
 pragma solidity ^0.8.4;
 
-import '../ERC721AUpgradeable.sol';
-import '../ERC721A__Initializable.sol';
+import '../ERC721AUpgradeable/ERC721AUpgradeable.sol';
+import '../ERC721AUpgradeable/ERC721A__Initializable.sol';
 
 contract ERC721AMockUpgradeable is ERC721A__Initializable, ERC721AUpgradeable {
     function __ERC721AMock_init(string memory name_, string memory symbol_) internal onlyInitializingERC721A {
@@ -55,11 +55,7 @@ contract ERC721AMockUpgradeable is ERC721A__Initializable, ERC721AUpgradeable {
         _safeMint(to, quantity);
     }
 
-    function safeMint(
-        address to,
-        uint256 quantity,
-        bytes memory _data
-    ) public {
+    function safeMint(address to, uint256 quantity, bytes memory _data) public {
         _safeMint(to, quantity, _data);
     }
 

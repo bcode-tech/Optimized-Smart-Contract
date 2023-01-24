@@ -5,8 +5,8 @@
 pragma solidity ^0.8.4;
 
 import './IERC721ABurnableUpgradeable.sol';
-import '../ERC721AUpgradeable.sol';
-import '../ERC721A__Initializable.sol';
+import '../ERC721AUpgradeable/ERC721AUpgradeable.sol';
+import '../ERC721AUpgradeable/ERC721A__Initializable.sol';
 
 /**
  * @title ERC721ABurnable.

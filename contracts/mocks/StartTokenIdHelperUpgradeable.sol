@@ -4,7 +4,7 @@
 
 pragma solidity ^0.8.4;
 import {StartTokenIdHelperStorage} from './StartTokenIdHelperStorage.sol';
-import '../ERC721A__Initializable.sol';
+import '../ERC721AUpgradeable/ERC721A__Initializable.sol';
 
 /**
  * This Helper is used to return a dynamic value in the overridden _startTokenId() function.

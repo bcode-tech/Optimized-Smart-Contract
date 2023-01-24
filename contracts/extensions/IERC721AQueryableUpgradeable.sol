@@ -4,7 +4,7 @@
 
 pragma solidity ^0.8.4;
 
-import '../IERC721AUpgradeable.sol';
+import '../ERC721AUpgradeable/IERC721AUpgradeable.sol';
 
 /**
  * @dev Interface of ERC721AQueryable.
@@ -59,11 +59,7 @@ interface IERC721AQueryableUpgradeable is IERC721AUpgradeable {
      *
      * - `start < stop`
      */
-    function tokensOfOwnerIn(
-        address owner,
-        uint256 start,
-        uint256 stop
-    ) external view returns (uint256[] memory);
+    function tokensOfOwnerIn(address owner, uint256 start, uint256 stop) external view returns (uint256[] memory);
 
     /**
      * @dev Returns an array of token IDs owned by `owner`.
